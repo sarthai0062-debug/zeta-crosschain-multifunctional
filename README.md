@@ -1,25 +1,75 @@
-# ⚡ Universal NFT Bridge - ZetaChain Hackathon
+# ⚡ ZetaChain Cross-Chain Multifunctional NFT Bridge
 
-A cross-chain NFT marketplace that enables seamless minting and transferring of NFTs across Solana, Sui, and TON ecosystems using ZetaChain's omnichain infrastructure.
+<div align="center">
 
-![ZetaChain](https://img.shields.io/badge/ZetaChain-Testnet-blue)
-![Solidity](https://img.shields.io/badge/Solidity-0.8.26-green)
-![React](https://img.shields.io/badge/React-18.2-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+### 🌐 One NFT, Infinite Possibilities Across Chains 🚀
 
-## 🌟 Features
+*Seamlessly mint and transfer NFTs across Solana, Sui, and TON ecosystems using ZetaChain's omnichain infrastructure*
 
-- 🎨 **Universal NFT Minting** - Create NFTs directly on ZetaChain
-- 🌉 **Cross-Chain Transfers** - Transfer NFTs to Solana, Sui, or TON
-- 🛡️ **ZetaChain Standards Compliant** - Full implementation of Universal Contract interface
-- ⚡ **Fast & Efficient** - Optimized gas usage (~400k gas per transfer)
-- 🎯 **User-Friendly** - Clean, intuitive interface with MetaMask integration
+[![ZetaChain](https://img.shields.io/badge/ZetaChain-Testnet-blue?style=for-the-badge&logo=ethereum)](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
+[![Solidity](https://img.shields.io/badge/Solidity-0.8.26-green?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
+[![React](https://img.shields.io/badge/React-18.2-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
 
-## 🚀 Live Demo
+[🎮 Live Demo](#-live-demo) • [📖 Documentation](#-documentation) • [🚀 Quick Start](#-installation) • [🎥 Video](#-demo-video)
 
-- **Contract**: [0x6Fde11615C80251d394586CD185bb56449d74569](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
-- **Network**: ZetaChain Athens Testnet (Chain ID: 7001)
-- **Gateway**: 0x6c533f7fe93fae114d0954697069df33c9b74fd7
+</div>
+
+---
+
+## ✨ Why This Project Rocks
+
+<table>
+<tr>
+<td width="33%" align="center">
+<h3>🎨 Universal Minting</h3>
+<p>Create NFTs once on ZetaChain, use them everywhere. No more chain-specific minting!</p>
+</td>
+<td width="33%" align="center">
+<h3>🌉 True Cross-Chain</h3>
+<p>Transfer NFTs to Solana, Sui, or TON with a single click. Magic? No, ZetaChain!</p>
+</td>
+<td width="33%" align="center">
+<h3>🛡️ Battle-Tested</h3>
+<p>Full ZetaChain standards compliance with onCall/onRevert handlers. Security first!</p>
+</td>
+</tr>
+<tr>
+<td width="33%" align="center">
+<h3>⚡ Lightning Fast</h3>
+<p>~400k gas per transfer. Optimized for speed and efficiency!</p>
+</td>
+<td width="33%" align="center">
+<h3>🎯 User-Friendly</h3>
+<p>Beautiful UI with MetaMask auto-config. Your grandma could use it!</p>
+</td>
+<td width="33%" align="center">
+<h3>🔥 Production Ready</h3>
+<p>Deployed, tested, and verified on ZetaChain testnet. Ready to scale!</p>
+</td>
+</tr>
+</table>
+
+## 🎮 Live Demo
+
+<div align="center">
+
+### 🔗 [Try it Live!](http://localhost:3000) 🔗
+
+**Smart Contract**: [`0x6Fde11615C80251d394586CD185bb56449d74569`](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
+
+**Network**: ZetaChain Athens Testnet (Chain ID: 7001)
+
+**Gateway**: `0x6c533f7fe93fae114d0954697069df33c9b74fd7`
+
+</div>
+
+### 🎯 What You Can Do:
+
+1. 🎨 **Mint NFTs** - Create your unique NFTs on ZetaChain
+2. 🌉 **Transfer Cross-Chain** - Send to Solana, Sui, or TON
+3. 📊 **Track Transactions** - View all transfers on ZetaScan
+4. 🔍 **Verify Ownership** - Check NFT status anytime
 
 ## 📋 Prerequisites
 
