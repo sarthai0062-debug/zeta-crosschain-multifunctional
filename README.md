@@ -54,9 +54,9 @@
 
 <div align="center">
 
-### 🔗 [Try it Live!](https://your-project.vercel.app) 🔗
+### 🔗 [Try it Live!](https://test1-6non9xrje-sarss-projects.vercel.app) 🔗
 
-*Update this URL after deploying to Vercel*
+**Live Demo**: https://test1-6non9xrje-sarss-projects.vercel.app
 
 **Smart Contract**: [`0x6Fde11615C80251d394586CD185bb56449d74569`](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
 
