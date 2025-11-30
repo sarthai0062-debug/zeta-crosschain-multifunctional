@@ -9,15 +9,124 @@
 [![ZetaChain](https://img.shields.io/badge/ZetaChain-Testnet-blue?style=for-the-badge&logo=ethereum)](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.26-green?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
 [![React](https://img.shields.io/badge/React-18.2-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)](https://zeta-crosschain-multifunctional.vercel.app)
 
-[🎮 Live Demo](#-live-demo) • [📖 Documentation](#-documentation) • [🚀 Quick Start](#-installation) • [🎥 Video](#-demo-video)
+### 🔗 [**LIVE DEMO**](https://zeta-crosschain-multifunctional.vercel.app) 🔗
 
 </div>
 
 ---
 
-## ✨ Why This Project Rocks
+## 🎯 Hackathon Submission
+
+### ✅ Submission Requirements Met
+
+| Requirement | Status | Evidence |
+|------------|--------|----------|
+| **Import ZetaChain Contracts** | ✅ COMPLETE | [View Contract Code](./contracts/ZetaUniversalNFT.sol#L1-L50) |
+| **Use Gateway Interface** | ✅ COMPLETE | [Gateway Integration](./contracts/ZetaUniversalNFT.sol#L47) |
+| **Universal NFT Standard** | ✅ COMPLETE | [UniversalContract Implementation](./contracts/ZetaUniversalNFT.sol#L36-L45) |
+| **Deploy on ZetaChain Testnet** | ✅ COMPLETE | [Contract on Explorer](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569) |
+| **Implement onCall** | ✅ COMPLETE | [onCall Function](./contracts/ZetaUniversalNFT.sol#L127-L145) |
+| **Implement onRevert** | ✅ COMPLETE | [onRevert Function](./contracts/ZetaUniversalNFT.sol#L147-L159) |
+| **Cross-Chain Functionality** | ✅ COMPLETE | [Transfer Function](./contracts/ZetaUniversalNFT.sol#L103-L125) |
+
+### 🔗 Important Links
+
+<div align="center">
+
+| Resource | Link |
+|----------|------|
+| 🌐 **Live Demo** | [https://zeta-crosschain-multifunctional.vercel.app](https://zeta-crosschain-multifunctional.vercel.app) |
+| 📜 **Smart Contract** | [0x6Fde11615C80251d394586CD185bb56449d74569](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569) |
+| 💻 **GitHub Repository** | [sarthai0062-debug/zeta-crosschain-multifunctional](https://github.com/sarthai0062-debug/zeta-crosschain-multifunctional) |
+| 🔍 **Contract Verification** | [View on ZetaScan](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569) |
+| 📊 **Transaction History** | [View Transfers](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569#transactions) |
+| 📖 **Documentation** | [Standards Compliance](./STANDARDS_COMPLIANCE.md) |
+
+</div>
+
+---
+
+## 🏗️ Built With Amazon Kiro AI
+
+<div align="center">
+
+### 🤖 Powered by Amazon Kiro - AI-Assisted Development
+
+This project was developed with the assistance of **Amazon Kiro**, an AI-powered development assistant that helped with:
+
+- ✅ Smart contract architecture and implementation
+- ✅ ZetaChain standards compliance
+- ✅ Frontend development and UI/UX design
+- ✅ Deployment automation and testing
+- ✅ Documentation and code quality
+
+**Development Environment**: Amazon Kiro IDE  
+**AI Assistant**: Kiro AI Agent  
+**Code Quality**: AI-reviewed and optimized
+
+</div>
+
+---
+
+## 📋 ZetaChain Integration Proof
+
+### 1️⃣ Gateway Integration
+
+```solidity
+// contracts/ZetaUniversalNFT.sol
+address public gateway;
+
+constructor(
+    address _gateway,
+    string memory name,
+    string memory symbol
+) ERC721(name, symbol) Ownable(msg.sender) {
+    gateway = IGatewayZEVM(_gateway);  // ✅ ZetaChain Gateway
+}
+```
+
+**Gateway Address**: `0x6c533f7fe93fae114d0954697069df33c9b74fd7`
+
+### 2️⃣ Universal Contract Interface
+
+```solidity
+// Implements ZetaChain's UniversalContract interface
+contract ZetaUniversalNFT is ERC721URIStorage, UniversalContract, Ownable {
+    
+    // ✅ onCall - Receives cross-chain messages
+    function onCall(
+        MessageContext calldata context,
+        address zrc20,
+        uint256 amount,
+        bytes calldata message
+    ) external override { ... }
+    
+    // ✅ onRevert - Handles failed transfers
+    function onRevert(RevertContext calldata context) external override { ... }
+}
+```
+
+### 3️⃣ Deployment Proof
+
+**Deployment Transaction**: [View on ZetaScan](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
+
+**Network**: ZetaChain Athens Testnet (Chain ID: 7001)
+
+**Deployment Script**: [deploy-zeta-nft.js](./scripts/deploy-zeta-nft.js)
+
+### 4️⃣ Working Transactions
+
+| Transaction Type | Count | Example |
+|-----------------|-------|---------|
+| NFT Mints | 4+ | [View Tx](https://testnet.zetascan.com/tx/0x3820596fdcb54f70593ac7dc0dbc3c5b44f3bf8e1d505ffa40ceb1efbed18352) |
+| Cross-Chain Transfers | 4+ | [View Tx](https://testnet.zetascan.com/tx/0xf5c9f281900c1dbbc86c6927838ed7b1003a75e6708cabea2bb409c432a575ac) |
+| Total Gas Used | ~1.6M | Optimized for efficiency |
+
+---
+
+## ✨ Key Features
 
 <table>
 <tr>
@@ -50,41 +159,22 @@
 </tr>
 </table>
 
-## 🎮 Live Demo
+---
 
-<div align="center">
+## 🚀 Quick Start
 
-### 🔗 [Try it Live!](https://test1-6non9xrje-sarss-projects.vercel.app) 🔗
-
-**Live Demo**: https://test1-6non9xrje-sarss-projects.vercel.app
-
-**Smart Contract**: [`0x6Fde11615C80251d394586CD185bb56449d74569`](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
-
-**Network**: ZetaChain Athens Testnet (Chain ID: 7001)
-
-**Gateway**: `0x6c533f7fe93fae114d0954697069df33c9b74fd7`
-
-</div>
-
-### 🎯 What You Can Do:
-
-1. 🎨 **Mint NFTs** - Create your unique NFTs on ZetaChain
-2. 🌉 **Transfer Cross-Chain** - Send to Solana, Sui, or TON
-3. 📊 **Track Transactions** - View all transfers on ZetaScan
-4. 🔍 **Verify Ownership** - Check NFT status anytime
-
-## 📋 Prerequisites
+### Prerequisites
 
 - Node.js v16+
 - MetaMask wallet
 - ZetaChain testnet ZETA tokens ([Get from faucet](https://labs.zetachain.com/get-zeta))
 
-## 🛠️ Installation
+### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/universal-nft-bridge.git
-cd universal-nft-bridge
+git clone https://github.com/sarthai0062-debug/zeta-crosschain-multifunctional.git
+cd zeta-crosschain-multifunctional
 
 # Install dependencies
 npm install
@@ -95,77 +185,55 @@ npm install
 cd ..
 ```
 
-## ⚙️ Configuration
-
-1. Create a `.env` file in the root directory:
-
-```env
-PRIVATE_KEY=your_private_key_here
-GATEWAY_ADDRESS=0x6c533f7fe93fae114d0954697069df33c9b74fd7
-```
-
-2. Update `frontend/src/config.js` with your contract address (if deploying new contract)
-
-## 🚀 Usage
-
-### Deploy Smart Contract
+### Run Locally
 
 ```bash
-# Compile contracts
-npx hardhat compile
-
-# Deploy to ZetaChain testnet
-npx hardhat run scripts/deploy-zeta-nft.js --network zeta_testnet
-
-# Test the contract
-npx hardhat run scripts/test-contract.js --network zeta_testnet
-```
-
-### Run Frontend
-
-```bash
+# Start frontend
 cd frontend
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:3000
 
-## 📖 How It Works
+---
 
-1. **Connect Wallet** - Connect MetaMask to ZetaChain testnet
-2. **Mint NFT** - Create a new NFT with custom metadata
-3. **Select Destination** - Choose target blockchain (Solana/Sui/TON)
-4. **Transfer** - Initiate cross-chain transfer
-5. **Confirmation** - NFT is burned on source and event emitted to destination
+## 🎮 How to Use
 
-## 🏗️ Architecture
+### 1️⃣ Connect Wallet
+- Click "Connect MetaMask"
+- Approve ZetaChain testnet addition
+- Switch to ZetaChain network
 
-### Smart Contract (`ZetaUniversalNFT.sol`)
+### 2️⃣ Mint NFT
+- Enter NFT name
+- Enter image URI (e.g., `https://picsum.photos/400/400`)
+- Click "Mint NFT"
+- Approve transaction in MetaMask
 
-- ✅ ERC721URIStorage for NFT metadata
-- ✅ UniversalContract interface (onCall, onRevert)
-- ✅ Gateway integration for cross-chain messaging
-- ✅ Message replay protection
-- ✅ Token chain tracking
+### 3️⃣ Transfer Cross-Chain
+- Enter Token ID (from minted NFT)
+- Select destination chain (Solana/Sui/TON)
+- Enter destination address
+- Click "Transfer NFT"
+- View transaction on ZetaScan
 
-### Frontend (React + Vite)
+---
 
-- ✅ MetaMask integration with auto-configuration
-- ✅ Real-time transaction status
-- ✅ Multi-chain address support
-- ✅ Responsive design
+## 🌐 Supported Chains
 
-## 🎯 ZetaChain Standards Compliance
+<div align="center">
 
-This project fully implements ZetaChain's Universal NFT standards:
+| Chain | Status | Chain ID | Icon |
+|-------|--------|----------|------|
+| **Solana** | ✅ Active | 1 | 🟣 |
+| **Sui** | ✅ Active | 2 | 🔵 |
+| **TON** | ✅ Active | 3 | 💎 |
 
-- ✅ `onCall()` - Receives cross-chain NFT transfers
-- ✅ `onRevert()` - Handles failed transfers
-- ✅ Gateway integration
-- ✅ Message context tracking
-- ✅ Replay attack prevention
+*More chains coming soon!*
 
-See [STANDARDS_COMPLIANCE.md](./STANDARDS_COMPLIANCE.md) for details.
+</div>
+
+---
 
 ## 📊 Test Results
 
@@ -184,25 +252,34 @@ See [STANDARDS_COMPLIANCE.md](./STANDARDS_COMPLIANCE.md) for details.
 
 </div>
 
-## 🌐 Supported Chains
+---
 
-<div align="center">
+## 🏗️ Architecture
 
-| Chain | Status | Chain ID | Icon |
-|-------|--------|----------|------|
-| **Solana** | ✅ Active | 1 | 🟣 |
-| **Sui** | ✅ Active | 2 | 🔵 |
-| **TON** | ✅ Active | 3 | 💎 |
+### Smart Contract (`ZetaUniversalNFT.sol`)
 
-*More chains coming soon!*
+- ✅ ERC721URIStorage for NFT metadata
+- ✅ UniversalContract interface (onCall, onRevert)
+- ✅ Gateway integration for cross-chain messaging
+- ✅ Message replay protection
+- ✅ Token chain tracking
+- ✅ Secure ownership management
 
-</div>
+### Frontend (React + Vite)
+
+- ✅ MetaMask integration with auto-configuration
+- ✅ Real-time transaction status
+- ✅ Multi-chain address support
+- ✅ Responsive design
+- ✅ Transaction history with explorer links
+
+---
 
 ## 📁 Project Structure
 
 ```
 ├── contracts/
-│   └── ZetaUniversalNFT.sol       # Main contract
+│   └── ZetaUniversalNFT.sol       # Main contract (ZetaChain compliant)
 ├── scripts/
 │   ├── deploy-zeta-nft.js         # Deployment script
 │   ├── test-contract.js           # Testing script
@@ -213,9 +290,29 @@ See [STANDARDS_COMPLIANCE.md](./STANDARDS_COMPLIANCE.md) for details.
 │   │   ├── App.css                # Styling
 │   │   └── config.js              # Configuration
 │   └── index.html
+├── STANDARDS_COMPLIANCE.md        # ZetaChain standards proof
+├── DEPLOYMENT_INFO.md             # Deployment details
 ├── hardhat.config.js
 └── README.md
 ```
+
+---
+
+## 🎥 Demo Video
+
+[Add your demo video link here]
+
+---
+
+## 📸 Screenshots
+
+### Live Application
+![App Screenshot](https://via.placeholder.com/800x400?text=Add+Your+Screenshot)
+
+### Transaction on ZetaScan
+![Transaction](https://via.placeholder.com/800x400?text=Add+Transaction+Screenshot)
+
+---
 
 ## 🔧 Commands
 
@@ -236,32 +333,40 @@ npx hardhat run scripts/check-transfer-status.js --network zeta_testnet
 cd frontend && npm run dev
 ```
 
-## 🎥 Demo Video
-
-[Add your demo video link here]
-
-## 📸 Screenshots
-
-[Add screenshots of your application]
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- [ZetaChain](https://www.zetachain.com/) for the omnichain infrastructure
-- [OpenZeppelin](https://www.openzeppelin.com/) for secure smart contract libraries
-- ZetaChain community for support and guidance
-
-## 📞 Contact
-
-For questions or support, please open an issue or reach out on [Discord](https://discord.gg/zetachain).
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
-Built with ❤️ for ZetaChain Hackathon 2025
+## 🙏 Acknowledgments
+
+- **ZetaChain** for the omnichain infrastructure
+- **Amazon Kiro** for AI-assisted development
+- **OpenZeppelin** for secure smart contract libraries
+- **Vercel** for hosting and deployment
+- ZetaChain community for support and guidance
+
+---
+
+## 📞 Contact & Support
+
+- **GitHub**: [@sarthai0062-debug](https://github.com/sarthai0062-debug)
+- **Repository**: [zeta-crosschain-multifunctional](https://github.com/sarthai0062-debug/zeta-crosschain-multifunctional)
+- **Issues**: [Report a bug](https://github.com/sarthai0062-debug/zeta-crosschain-multifunctional/issues)
+
+---
+
+<div align="center">
+
+### 🏆 Built for ZetaChain Hackathon 2025 🏆
+
+**Made with ❤️ using Amazon Kiro AI**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/sarthai0062-debug/zeta-crosschain-multifunctional)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel)](https://zeta-crosschain-multifunctional.vercel.app)
+[![ZetaChain](https://img.shields.io/badge/ZetaChain-Contract-blue?style=for-the-badge&logo=ethereum)](https://testnet.zetascan.com/address/0x6Fde11615C80251d394586CD185bb56449d74569)
+
+</div>
